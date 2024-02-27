@@ -1,6 +1,7 @@
 #pragma once
 
 #include <ll/api/plugin/NativePlugin.h>
+#include <memory>
 
 namespace plugin {
 

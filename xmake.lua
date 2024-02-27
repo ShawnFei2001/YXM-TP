@@ -8,6 +8,7 @@ end
 
 -- Option 1: Use the latest version of LeviLamina released on GitHub.
 add_requires("levilamina")
+add_requires("sqlitecpp 3.2.1")
 
 -- Option 2: Use a specific version of LeviLamina released on GitHub.
 -- add_requires("levilamina x.x.x")
@@ -20,7 +21,7 @@ add_requires("levilamina")
 -- package("levilamina")
 --     add_urls("https://github.com/LiteLDev/LeviLamina.git")
 
---     add_deps("ctre 3.8.1")
+--     add_deps("legacyparticalapi 0.1.1")
 --     add_deps("entt 3.12.2")
 --     add_deps("fmt 10.1.1")
 --     add_deps("gsl 4.0.0")
@@ -40,7 +41,7 @@ add_requires("levilamina")
 --         import("package.tools.xmake").install(package)
 --     end)
 
-target("plugin") -- Change this to your plugin name.
+target("YXM-TP") -- Change this to your plugin name.
     add_cxflags(
         "/EHa",
         "/utf-8"
@@ -55,7 +56,8 @@ target("plugin") -- Change this to your plugin name.
         "src"
     )
     add_packages(
-        "levilamina"
+        "levilamina",
+        "sqlitecpp"
     )
     add_shflags(
         "/DELAYLOAD:bedrock_server.dll" -- Magic to import symbols from BDS
